@@ -1764,13 +1764,13 @@ h3.tittle {
     padding-top: 45px;
 }
 .contact-grid2{
-	background: url(../images/new2.jpg) no-repeat center;		
+	background-color: #01579B;
 }
 .contact-grid1{
-	background: url(../images/new3.jpg) no-repeat center;
+	background-color: rgb(15, 113, 189);
 }
 .contact-grid3{
-	background: url(../images/new4.jpg) no-repeat center;
+	background-color: rgb(63, 153, 221);
 }
 .contact-grid h4 {
     color: #FDA30E;
@@ -2935,7 +2935,7 @@ td.invert-image a img {
 	}
 	.pignose-layerslider .slide-visual {
 		width: 1000px;
-		height: 400px;
+		height: 80%;
 	}
 	.content-img-right h3 {
 		font-size: 19px;
@@ -4978,6 +4978,7 @@ td.invert-image a img {
 	}
 	.electronics, .men-wear, .contact, .typrography, .checkout, .single {
 		padding: 40px 0;
+		padding-top: 0;
 	}
 	.ui-widget-content {
 		margin: 1.5em 0 5em 0;
