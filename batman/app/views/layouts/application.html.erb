@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Batman</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
+<head>
+<title>Smart Shop a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Smart Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <link href="/assets/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- pignose css -->
 <link href="/assets/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
+
 
 <!-- //pignose css -->
 <link href="/assets/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -32,21 +29,21 @@
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
 <script src="/assets/jquery.easing.min.js"></script>
-
-  </head>
-
-  <body>
+</head>
+<body>
 <!-- header -->
 <div class="header">
 	<div class="container">
 		<ul>
-			<li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Nhanh chóng</li>
-			<li><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Miễn phí giao hàng</li>
-			<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">lienhe@example.com</a></li>
+			<li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Free and Fast Delivery</li>
+			<li><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Free shipping On all orders</li>
+			<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">info@example.com</a></li>
 		</ul>
 	</div>
 </div>
 <!-- //header -->
+<!-- header-bot -->
+
 <!-- banner -->
 <div class="ban-top">
 	<div class="container">
@@ -121,58 +118,105 @@
 								</div>
 							</ul>
 					</li>
-					<li><a class="menu__link" href="/contact">Liên hệ <span class="sr-only">(current)</span></a></li>
-          </ul>
+				<li><a class="menu__link" href="/contact">Liên hệ <span class="sr-only">(current)</span></a></li>
+				  </ul>
 				</div>
 			  </div>
 			</nav>	
 		</div>
+		
 		</div>
 		<div class="clearfix"></div>
 	</div>
 </div>
 
+<!-- //banner-top -->
+<!-- banner -->
 
-
-<div class="container">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="https://cdn1.tgdd.vn/qcao/31_05_2018_17_11_01_800x300.png" alt="Los Angeles" style="width:100%;">
-      </div>
-
-      <div class="item">
-        <img src="https://cdn4.tgdd.vn/qcao/06_06_2018_16_47_37_MotoroloTraGop_800-300.png" alt="Chicago" style="width:100%;">
-      </div>
-    
-      <div class="item">
-        <img src="https://cdn4.tgdd.vn/qcao/07_06_2018_10_23_50_Samsung-A6-A6+-800-300(1).png" alt="New york" style="width:100%;">
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
+<div class="header-bot">
+	<div class="container">
+		<div class="col-md-2 header-left">
+			<a href="/"><img src="/assets/logo.png"></a>
+		</div>
+		<div class="col-md-6 header-middle">
+			<form>
+				<div class="search">
+					<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
+				</div>
+				<div class="section_room">
+					<select id="country" onchange="change_country(this.value)" class="frm-field required">
+						<option value="null">All categories</option>
+						<option value="null">Electronics</option>     
+						<option value="AX">kids Wear</option>
+						<option value="AX">Men's Wear</option>
+						<option value="AX">Women's Wear</option>
+						<option value="AX">Watches</option>
+					</select>
+				</div>
+				<div class="sear-sub">
+					<input type="submit" value=" ">
+				</div>
+				<div class="clearfix"></div>
+			</form>
+		</div>
+		<div class="col-md-3 header-right footer-bottom">
+			<ul>
+				<li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
+					
+				</li>
+				<li><a class="fb" href="#"></a></li>
+				<li><a class="twi" href="#"></a></li>
+				<li><a class="insta" href="#"></a></li>
+				<li><a class="you" href="#"></a></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
 </div>
+<!-- //header-bot -->
 
-    <%= yield %>
 
+<div class="banner-grid">
+	<div id="visual">
+			<div class="slide-visual">
+				<!-- Slide Image Area (1000 x 424) -->
+				<ul class="slide-group">
+					<li><img class="img-responsive" src="https://cdn1.tgdd.vn/qcao/31_05_2018_17_11_01_800x300.png" alt="Dummy Image" /></li>
+					<li><img class="img-responsive" src="https://cdn1.tgdd.vn/qcao/31_05_2018_17_11_01_800x300.png" alt="Dummy Image" /></li>
+					<li><img class="img-responsive" src="https://cdn1.tgdd.vn/qcao/31_05_2018_17_11_01_800x300.png" alt="Dummy Image" /></li>
+				</ul>
 
+				<!-- Slide Description Image Area (316 x 328) -->
+				<div class="script-wrap">
+					<div class="slide-controller">
+						<a href="#" class="btn-prev"> Prev </a>
+						<a href="#" class="btn-play">- Play </a>
+						<a href="#" class="btn-pause">- Pause </a>
+						<a href="#" class="btn-next">- Next </a>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	<script type="text/javascript" src="/assets/pignose.layerslider.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+		$(window).load(function() {
+			$('#visual').pignoseLayerSlider({
+				play    : '.btn-play',
+				pause   : '.btn-pause',
+				next    : '.btn-next',
+				prev    : '.btn-prev'
+			});
+		});
+	//]]>
+	</script>
+
+</div>
+<!-- //banner -->
+
+		    <%= yield %>
 
 <!-- footer -->
 <div class="footer">
@@ -238,5 +282,11 @@
 	</div>
 </div>
 <!-- //footer -->
-  </body>
+
+</body>
+
+</html>
+
+</body>
+>>>>>>> local
 </html>
