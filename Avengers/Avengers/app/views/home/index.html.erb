@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div class="ele-bottom-grid">
+				<h3><span>Hi </span>!!</h3>
+
+<% @products.each do |product| %>
+						<div class="col-md-3 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+								<p><%= image_tag product.image.url(:medium), :class=>"pro-image-front",:size=>"autox320" %></p>
+								<p><%= image_tag product.image.url(:medium), :class=>"pro-image-back",:size=>"autox320"%></p>
+										<div class="men-cart-pro">
+											<div class="inner-men-cart-pro">
+											        <td><%= link_to 'Show', product ,:class=>"link-product-add-cart"%></td>
+											</div>
+										</div>
+										<span class="product-new-top">New</span>
+								</div>
+								<div class="item-info-product ">
+									<h4><%= product.title %></h4>
+									<div class="info-product-price">
+										<span class="item_price"><%= product.price %></span>
+									</div>
+									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
+								</div>
+							</div>
+						</div>
+    <% end %>
+				</div>
+						<div class="clearfix"></div>
+			</div>
+<%= will_paginate @products %>
