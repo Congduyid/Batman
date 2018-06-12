@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.all.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /products/1
@@ -69,6 +69,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :content, :price, :loai)
+      params.require(:product).permit(:title, :description, :image_url, :price, :species)
     end
 end

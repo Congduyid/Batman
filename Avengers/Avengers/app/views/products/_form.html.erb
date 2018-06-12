@@ -12,13 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.label :description %>
+    <%= form.text_area :description%>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url %>
   </div>
 
   <div class="field">
@@ -27,8 +32,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :loai %>
-    <%= form.text_field :loai %>
+    <%= form.label :species %>
+    <%= form.text_field :species %>
   </div>
 
   <div class="actions">
