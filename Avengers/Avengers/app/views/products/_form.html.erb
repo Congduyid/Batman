@@ -12,26 +12,38 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1">Name:</span>
+    <%= form.text_field :name,:class=>'form-control' %>
+  </div>
+  </div>
+
+
+
+  <div class="field">
+<div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1">Content:</span>
+  <%= form.text_area :content,:class=>'form-control' %>
+    </div>
+
   </div>
 
   <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+<div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1">Price:</span>
+      <%= form.text_field :price,:class=>'form-control' %>
+      </div>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="field">
-    <%= form.label :loai %>
-    <%= form.text_field :loai %>
+      <div class="input-group input-group-lg">
+      <span class="input-group-addon" id="sizing-addon1">Type:</span>
+            <%= form.text_field :loai,:class=>'form-control' %>
+      </div>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
