@@ -1,12 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<%= search_form_for @search, url: search_products_path, method: :post do |f| %>
-  <div class="field">
-    <%= f.label :title_cont, "Title" %>
-    <%= f.text_field :title_cont %>
-  </div>
-  <%= f.submit "Search" %>
-<% end %> 
+<%= form_tag products_path, method: :get do %>
+  <%= text_field_tag "query", params[:query], placeholder: "Title" %>
+  <%= submit_tag "Search!" %>
+<% end %>
+
 
 <h1>Products</h1>
 
@@ -36,6 +34,7 @@
     <% end %>
   </tbody>
 </table>
+<p><%= will_paginate @products %></p>
 <br>
 
 <%= link_to 'New Product', new_product_path %>
