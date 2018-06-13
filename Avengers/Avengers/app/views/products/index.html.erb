@@ -1,8 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<%= search_form_for @search, url: search_products_path, method: :post do |f| %>
+  <div class="field">
+    <%= f.label :title_cont, "Title" %>
+    <%= f.text_field :title_cont %>
+  </div>
+  <%= f.submit "Search" %>
+<% end %> 
+
 <h1>Products</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -13,13 +21,12 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.title %></td>
+        <td><b><%= product.title %></b></td>
         <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
+        <td><%= image_tag product.image.url(:medium),:size=>"80x80"%></td>
         <td><%= product.price %></td>
         <td><%= product.species %></td>
         <td><%= link_to 'Show', product %></td>
@@ -29,9 +36,7 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Product', new_product_path %>
 
-<p><%= will_paginate @orders %></p>
