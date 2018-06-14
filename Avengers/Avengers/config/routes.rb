@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :loais
   get '/' => 'home#index'
   get '/contact' => 'contact#contact'
   get '/home' => 'home#index'

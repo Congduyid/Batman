@@ -10,23 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_12_083418) do
+ActiveRecord::Schema.define(version: 2018_06_14_073943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "loais", force: :cascade do |t|
+    t.string "loaihang"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "image_url"
     t.decimal "price", precision: 20, scale: 2
-    t.string "species"
+    t.bigint "loai_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_file_name"
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.index ["loai_id"], name: "index_products_on_loai_id"
   end
 
+  add_foreign_key "products", "loais"
 end

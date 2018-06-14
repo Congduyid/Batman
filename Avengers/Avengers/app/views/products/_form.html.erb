@@ -11,8 +11,8 @@
     </div>
   <% end %>
 
-  <div class="field">
 
+  <div class="field">
  <div class="input-group input-group-lg">
   <span class="input-group-addon" id="sizing-addon1">Name:</span>
     <%= form.text_field :title ,:class=>'form-control'%>
@@ -42,10 +42,9 @@
   </div>
 
   <div class="field">
-
       <div class="input-group input-group-lg">
-      <span class="input-group-addon" id="sizing-addon1">species:</span>
-    <%= form.text_field :species,:class=>'form-control' %>
+      <span class="input-group-addon" id="sizing-addon1">Type:</span>
+       <%= form.select :loai_id, options_from_collection_for_select(Loai.all, :id, :loaihang), {:include_blank => '----'}, :class=>'form-control' %>
 
   </div>
 
