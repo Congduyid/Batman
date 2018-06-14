@@ -1,4 +1,7 @@
 
+<a href="https://sway.com/hdpoYdXMutdHxT6C?ref=Link"> Link </a>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,6 +42,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
+
+
 <!-- header -->
 <div class="header">
 	<div class="container">
@@ -149,8 +154,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-6 header-middle">
 			<form>
 				<div class="search">
-					<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
-				</div>
+				<%= form_tag home_path, method: :get do %>
+				<%= text_field_tag "query", params[:query], placeholder: "Title" %>
+				<%= submit_tag "Search!" %>
+				<% end %>
+			</div>
 				<div class="section_room">
 					<select id="country" onchange="change_country(this.value)" class="frm-field required">
 						<option value="null">All categories</option>
