@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     if params[:query].present?
       @products = Product.where("loai_id = 1").search_name(params[:query]).paginate(page: params[:page], per_page: 5)
     else
-      @products = Product.where("loai_id = 1").all.paginate(page: params[:page], per_page: 2)
+      @products = Product.where("loai_id = 1").all.paginate(page: params[:page], per_page: 5)
     end
 
     if params[:query].present?
