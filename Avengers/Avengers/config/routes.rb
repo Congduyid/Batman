@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :line_items
+  resources :carts
   resources :loais
   get '/' => 'home#index'
   get '/contact' => 'contact#contact'
