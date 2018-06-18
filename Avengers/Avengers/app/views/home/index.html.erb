@@ -14,14 +14,11 @@
 										<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
-									<h4><%= product.title %></h4>
+									<h3><%= product.title %></h3>
 									<div class="info-product-price">
-										<span class="item_price"><%= product.price %></span>
+										<span class="item_price"><%= number_to_currency(product.price) %></span>
+										<%= button_to 'Add to Cart', line_items_path(:product_id => product), :class=>"item_add single-item hvr-outline-out button2" %>
 									</div>
-									<div class="price_line">
-            							<span class="price"><%= number_to_currency(product.price) %></span> 
-            							<%= button_to 'Add to Cart', line_items_path(:product_id => product), :class=>"item_add single-item hvr-outline-out button2" %>
-        							</div>
 								</div>
 							</div>
 						</div>
