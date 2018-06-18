@@ -10,4 +10,10 @@ class ApplicationController < ActionController::Base
         session[:cart_id] = cart.id
         cart
     end
+<<<<<<< HEAD
 end
+=======
+
+    helper_method :current_cart
+end
+>>>>>>> master

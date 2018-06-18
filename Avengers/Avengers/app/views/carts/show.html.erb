@@ -1,5 +1,5 @@
-<p id="notice"><%= notice %></p>
-<h2>Your Cart</h2>
+<!-- <p id="notice"><%= notice %></p> -->
+<!-- <h2>Your Cart</h2>
 <table>
     <% @cart.line_items.each do |item| %>
         <tr>
@@ -22,3 +22,7 @@
 
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>
+ -->
+
+<p id="notice"><%= notice %></p>  
+ <%= render @cart %>
