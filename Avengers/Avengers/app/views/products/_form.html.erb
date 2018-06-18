@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+<%= tinymce %>
+
 
   <div class="field">
  <div class="input-group input-group-lg">
@@ -24,7 +26,9 @@
   <div class="field">
 <div class="input-group input-group-lg">
   <span class="input-group-addon" id="sizing-addon1">Content:</span>    
-  <%= form.text_area :description ,:class=>'form-control' %>
+  <%= form.text_area :description, :class => "tinymce", :rows => 10, :cols => 20 %>
+
+  <%# <%= form.text_area :description ,:class=>'form-control' %> 
   </div>
 
   <div class="field">
