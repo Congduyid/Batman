@@ -133,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li><a class="menu__link" href="/contact">Liên hệ <span class="sr-only">(current)</span></a></li>
 
 				<% if !session[:user_id] %>
-				<li><a class="menu__link" href="/login">Dang nhap<span class="sr-only">(current)</span></a></li>
+				<li><a class="menu__link" href="/login">Đăng nhập<span class="sr-only">(current)</span></a></li>
 				<% end %>
 				<% if session[:user_id] %>
 				<% @hihi = User.find(session[:user_id]) %>
