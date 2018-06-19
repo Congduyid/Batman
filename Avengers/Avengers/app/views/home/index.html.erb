@@ -45,17 +45,19 @@
 										<span class="product-new-top">New</span>
 								</div>
 								<div class="item-info-product ">
-									<h4><%= phukien.title %></h4>
+									<h3><%= phukien.title %></h3>
 									<div class="info-product-price">
-										<span class="item_price"><%= phukien.price %></span>
+										<span class="item_price"><%= number_to_currency(phukien.price) %></span>
+										<%= button_to 'Add to Cart', line_items_path(:product_id => phukien), :class=>"item_add single-item hvr-outline-out button2" %>
 									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
 								</div>
 							</div>
 						</div>
     <% end %>
 				</div>
 						<div class="clearfix"></div>
+							<p><%= will_paginate @phukiens %></p>
+
 </div>
 
 <p><%= will_paginate @phukiens %></p>

@@ -2,12 +2,14 @@
 <html>
 <head>
 
-<%= tinymce_assets %>
-<script type="text/javascript" src="/assets/tinymce.js">
-    <%= csrf_meta_tags %>
+	<%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<%= tinymce_assets %>
+<script type="text/javascript" src="/assets/tinymce.js">
+    
 <title>Smart Shop a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -125,7 +127,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</li>
 				<li><a class="menu__link" href="/contact">Liên hệ <span class="sr-only">(current)</span></a></li>
 
-<li class="dropdown menu__item">
+				<% if !session[:user_id] %>
+				<li><a class="menu__link" href="/login">Dang nhap<span class="sr-only">(current)</span></a></li>
+				<% end %>
+				<% if session[:user_id] %>
+				<% @hihi = User.find(session[:user_id]) %>
+				<li class="dropdown menu__item">
+										<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin (<%= @hihi.name %>) <span class="caret"></span></a>
+											<ul class="dropdown-menu multi-column columns-3">
+												<div class="row">
+														<li><p>Xin chao! <%= @hihi.name %></p></li>
+
+														<li><%= link_to t('menu.orders'),orders_path %></li>
+														<li><%= link_to t('menu.products'), products_path %></li>
+														<li><%= link_to t('menu.users'),users_path %></li>
+														<%= button_to 'Dang xuat', logout_path, method: :delete %>
+													<div class="clearfix"></div>
+												</div>
+											</ul>
+									</li>				
+				<% end %>
+					<li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
@@ -133,13 +155,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<div id="cart">
 												<%= render current_cart %>	
 											</div>
-										</ul>
-									
+										</ul>	
 									<div class="clearfix"></div>
 								</div>
 							</ul>
 					</li>
-
 				  </ul>
 				</div>
 			  </div>
@@ -203,7 +223,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<figcaption class="card-body">Image caption 4</figcaption>
 	</figure>
 </div>
-
 		    <%= yield %>
 
 <!-- footer -->
@@ -335,3 +354,4 @@ $(function(){
 	});
 });
 </script>
+</style>
