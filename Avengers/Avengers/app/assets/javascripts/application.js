@@ -15,3 +15,15 @@
 //= require turbolinks
 //= require_tree .
 //= require tinymce
+//= require Chart.bundle
+//= require chartkick
+
+//= require chartkick
+
+//= require highcharts
+//= require chartkick
+
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require_tree

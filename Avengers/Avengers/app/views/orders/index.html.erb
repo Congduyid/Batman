@@ -29,7 +29,9 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
+
+
+<%= pie_chart @orders.group(:name).count %>
 
 <%= link_to 'New Order', new_order_path %>

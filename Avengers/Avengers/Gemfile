@@ -67,3 +67,7 @@ gem 'pg_search'
 gem 'tinymce-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem "chartkick"
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'

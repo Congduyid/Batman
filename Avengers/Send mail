@@ -1,0 +1,12 @@
+rails generate mailer Notifier order_received
+
+
+
+select a.id, b.title, c.quantity, b.price * c.quantity as Total
+from orders a, products b, line_items c
+where a.id = b.order_id and b.id = c.product_id
+
+
+select *
+from products
+where price between 0 and 16

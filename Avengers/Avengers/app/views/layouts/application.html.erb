@@ -130,9 +130,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
 										<ul class="multi-column-dropdown">
-											<div id="cart">
+											<!-- <div id="cart">
 												<%= render current_cart %>	
-											</div>
+											</div> -->
+
+											<div id="cart"
+<% if @cart %>
+<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+<%= render @cart %>
+<% end %>
+<% end %>
+</div>
 										</ul>
 									
 									<div class="clearfix"></div>
@@ -240,6 +248,9 @@ users_path
 			<div class="clearfix"></div>
 			<div class="sign-grds"></div>
 
+			<div class="col-md-3">
+				<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+			</div>
 				<div class="col-md-3 sign-gd">
 					
 					<h4>Information</h4>
