@@ -11,15 +11,22 @@ class Product < ApplicationRecord
     has_many :line_items
     before_destroy :check_if_has_line_item
   
-	private
+	# private
   
-    def check_if_has_line_item
-        if line_items.empty?
-            return true
-        else
-            errors.add(:base, 'This product has a LineItem')
-            return false
+ #    def check_if_has_line_item
+ #        if line_items.empty?
+ #            return true
+ #        else
+ #            errors.add(:base, 'This product has a LineItem')
+ #            return false
+ #        end
+ #    end
+    private
+# ensure that there are no line items referencing this product
+    def ensure_not_referenced_by_any_line_item
+        unless line_items.empty?
+            errors.add(:base, 'Line Items present')
+            throw :abort
         end
     end
-
 end
