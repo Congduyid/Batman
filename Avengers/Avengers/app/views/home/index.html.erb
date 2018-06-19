@@ -16,7 +16,8 @@
 								<div class="item-info-product ">
 									<h3><%= product.title %></h3>
 									<div class="info-product-price">
-										<span class="item_price"><%= number_to_currency(product.price) %></span>
+										<span class="item_price"><%= number_to_currency(product.price, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>
+										<div class="description">
 										<%= button_to 'Add to Cart', line_items_path(:product_id => product), :class=>"item_add single-item hvr-outline-out button2" %>
 									</div>
 								</div>
@@ -47,7 +48,8 @@
 								<div class="item-info-product ">
 									<h3><%= phukien.title %></h3>
 									<div class="info-product-price">
-										<span class="item_price"><%= number_to_currency(phukien.price) %></span>
+										<span class="item_price"><%= number_to_currency(phukien.price, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>
+										<div class="description">
 										<%= button_to 'Add to Cart', line_items_path(:product_id => phukien), :class=>"item_add single-item hvr-outline-out button2" %>
 									</div>
 								</div>

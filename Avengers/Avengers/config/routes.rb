@@ -16,6 +16,26 @@ Rails.application.routes.draw do
   get '/contact' => 'contact#contact'
   get '/home' => 'home#index'
 
+  get '/mottrieubatrieu' => 'mottrieubatrieu#index'
+  
+  get '/dienthoai' => 'mottrieubatrieu#tatcasp'
+  get 'theogia/giacoban' => 'mottrieubatrieu#gia1'
+  get 'theogia/motba' => 'mottrieubatrieu#motba'
+  get 'theogia/batam' => 'mottrieubatrieu#batam'
+  get 'theogia/tammuoi' => 'mottrieubatrieu#tammuoi'
+  get 'theogia/muoimuoilam' => 'mottrieubatrieu#muoimuoilam'
+  get 'theogia/muoilamhaimuoi' => 'mottrieubatrieu#muoilamhaimuoi'
+  
+  get 'theogia/haimuoihailam' => 'mottrieubatrieu#haimuoihailam'
+  get 'theogia/hailambamuoi' => 'mottrieubatrieu#hailambamuoi'
+  get 'theogia/bamuoibalam' => 'mottrieubatrieu#bamuoibalam'
+  get 'theogia/balambonmuoi' => 'mottrieubatrieu#balambonmuoi'
+  get 'theogia/bonmuoibonlam' => 'mottrieubatrieu#bonmuoibonlam'
+  get 'theogia/bonlamnammuoi' => 'mottrieubatrieu#bonlamnammuoi'
+
+
+
+
   resources :products do
   get :who_bought, on: :member
   end

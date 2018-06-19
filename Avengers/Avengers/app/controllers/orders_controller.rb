@@ -32,6 +32,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
+        ThongbaoMailer.khachhang(@order).deliver
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         format.html { redirect_to @order, notice: 'Order was successfully created.' }

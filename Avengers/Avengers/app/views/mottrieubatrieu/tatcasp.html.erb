@@ -1,0 +1,30 @@
+<div class="ele-bottom-grid">
+				<h3><span>Điện thoại</span>!!</h3>
+<% @tatca.each do |product| %>
+						<div class="col-md-2 product-men">
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+								<p><%= image_tag product.image.url(:medium), :class=>"pro-image-front", :size=>"autox220" %></p>
+								<p><%= image_tag product.image.url(:medium), :class=>"pro-image-back", :size=>"autox220"%></p>
+										<div class="men-cart-pro">
+											<div class="inner-men-cart-pro">
+											        <td><%= link_to 'Show', product ,:class=>"link-product-add-cart"%></td>
+											</div>
+										</div>
+										<span class="product-new-top">New</span>
+								</div>
+								<div class="item-info-product ">
+									<h3><%= product.title %></h3>
+									<div class="info-product-price">
+										<div class="description">
+										<span class="item_price"><%= number_to_currency(product.price, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>
+										<%= button_to 'Add to Cart', line_items_path(:product_id => product), :class=>"item_add single-item hvr-outline-out button2" %>
+									</div>
+								</div>
+							</div>
+						</div>
+    <% end %>
+				</div>
+						<div class="clearfix"></div>
+		<p><%= will_paginate @tatca %></p>
+</div>

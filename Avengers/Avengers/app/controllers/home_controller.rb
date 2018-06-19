@@ -14,6 +14,5 @@ class HomeController < ApplicationController
     else
       @phukiens = Product.where("loai_id = 2").paginate(page: params[:page], per_page: 2)
     end
-
   end
 end
