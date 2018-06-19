@@ -158,7 +158,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="row">
 										<ul class="multi-column-dropdown">
 											<div id="cart">
-												<%= render current_cart %>	
+												<% if @cart %>
+								<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+													<%= render @cart %>
+													<% end %>
+												<% end %>	
 											</div>
 										</ul>	
 									<div class="clearfix"></div>

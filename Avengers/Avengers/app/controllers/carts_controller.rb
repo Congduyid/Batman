@@ -61,7 +61,8 @@ class CartsController < ApplicationController
       @cart = current_cart
       @cart.destroy
       session[:cart_id] = nil
-    respond_to do |format|
+
+      respond_to do |format|
       format.html { redirect_to carts_url, notice: 'Cart was successfully destroyed.' }
       format.json { head :no_content }
     end
