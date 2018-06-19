@@ -22,11 +22,8 @@
 		</div>
 		<div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
 					<h1><%= @product.title %></h1>
-					<% if @product.loai_id == 1 %>
-						<h3>Điện thoại</h3>
-					<% else %> 
-						<h3>Phụ kiện</h3>
-					<% end %>
+					Loại: <h3><%= @product.loai.loaihang %></h3>
+
 
 					<span style="font-size: 30px" class="item_price"><%= number_to_currency(@product.price, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>
 					

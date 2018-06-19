@@ -27,12 +27,9 @@
         <td><%= product.description %></td>
         <td><%= image_tag product.image.url(:medium),:size=>"80x80"%></td>
         <td><%= product.price %></td>
+        <td><%= product.loai.loaihang %></td>
 
-        <% if product.loai_id == 1 %>
-						<td>Điện thoại</td>
-					<% else %> 
-						<td>Phụ kiện</td>
-					<% end %>
+        
 
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
