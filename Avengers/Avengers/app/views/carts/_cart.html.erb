@@ -5,13 +5,13 @@
 	<th>Name</th>
 	<th>Price</th>
 	<%= render(cart.line_items) %>
-</table>
 	<tr class="total_line">
 		<b><p style="font-size: 20px;">Total</p></b>
 		<p style="font-size: 20px;" class="total_cell"><%= number_to_currency(cart.total_price) %></p>
 	</tr>
-
-	<%= button_to "Checkout", new_order_path, method: :get %>
-	
-<%= button_to 'Empty cart', cart, method: :delete,
-data: { confirm: 'Are you sure?' } %>
+	</table>
+	</table>
+		<table class="table table-bordered">
+		<tr><%= button_to "Checkout", new_order_path, method: :get %></tr>
+		<tr><%= button_to 'Empty cart', cart, method: :delete, data: { confirm: 'Are you sure?' } %></tr>
+	</table>
