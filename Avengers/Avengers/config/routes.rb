@@ -34,8 +34,20 @@ Rails.application.routes.draw do
   get 'theogia/bonlamnammuoi' => 'mottrieubatrieu#bonlamnammuoi'
 
 
+  get '/phukien' => 'giaphukien#index'
 
-
+  get 'theogia/gia_0_2' => 'giaphukien#gia_0_2' 
+  get 'theogia/gia_2_4' => 'giaphukien#gia_2_4'
+  get 'theogia/gia_4_6' => 'giaphukien#gia_4_6'
+  get 'theogia/gia_6_8' => 'giaphukien#gia_6_8'
+  get 'theogia/gia_8_10' => 'giaphukien#gia_8_10'
+  
+  get 'theogia/gia_10_12' => 'giaphukien#gia_10_12'
+  get 'theogia/gia_12_14' => 'giaphukien#gia_12_14'
+  get 'theogia/gia_14_16' => 'giaphukien#gia_14_16'
+  get 'theogia/gia_16_18' => 'giaphukien#gia_16_18'
+  get 'theogia/gia_18_20' => 'giaphukien#gia_18_20'
+  get 'theogia/gia_20' => 'giaphukien#gia_20'
   resources :products do
   get :who_bought, on: :member
   end
