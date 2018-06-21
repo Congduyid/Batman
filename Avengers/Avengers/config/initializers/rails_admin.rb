@@ -45,4 +45,19 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model Product do
+    edit do
+      # For RailsAdmin >= 0.5.0
+      field :title
+      field :description, :ck_editor
+      field :price
+      field :image
+      # For RailsAdmin < 0.5.0
+      # field :description do
+      #   ckeditor true
+      # end
+    end
+  end
+
 end
