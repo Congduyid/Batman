@@ -1,13 +1,17 @@
 RailsAdmin.config do |config|
 
+  #config.parent_controller = 'ApplicationController' 
+  #config.main_app_name = ["Admin Dashboard"]
+
   ### Popular gems integration
 
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
+   config.authenticate_with do
+     warden.authenticate!
+   end
+   config.current_user_method(&:current_nguoidung)
+
   # config.current_user_method(&:current_user)
-  config.current_user_method(&:current_nguoidung)
 
   
   #config.current_nguoidungs_method(&:current_nguoidungs)
