@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'admin' => 'admin#index'
+  devise_for :nguoidungs
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
   controller :sessions do
     get 'login' => :new
@@ -12,9 +13,9 @@ Rails.application.routes.draw do
   resources :line_items
   resources :carts
   resources :loais
-  get '/' => 'home#index'
+   get '/' => 'home#index'
   get '/contact' => 'contact#contact'
-  get '/home' => 'home#index'
+   get '/home' => 'home#index'
 
   get '/mottrieubatrieu' => 'mottrieubatrieu#index'
   

@@ -40,6 +40,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 
+
+
+
 <!-- header -->
 <div class="header">
 	<div class="container">
@@ -148,26 +151,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</li>
 				<li><a class="menu__link" href="/contact">Liên hệ <span class="sr-only">(current)</span></a></li>
 
-				<% if !session[:user_id] %>
-				<li><a class="menu__link" href="/login">Đăng nhập<span class="sr-only">(current)</span></a></li>
-				<% end %>
-				<% if session[:user_id] %>
-				<% @hihi = User.find(session[:user_id]) %>
-				<li class="dropdown menu__item">
-										<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin (<%= @hihi.name %>) <span class="caret"></span></a>
-											<ul class="dropdown-menu multi-column columns-3">
-												<div class="row">
-														<li><p style="font-size:20px">Xin chào! <%= @hihi.name %></p></li>
-
-														<li><p style="font-size:20px"><%= link_to t('menu.orders'),orders_path %></p></li>
-														<li><p style="font-size:20px"><%= link_to t('menu.products'), products_path %></p></li>
-														<li><p style="font-size:20px"><%= link_to t('menu.users'),users_path %></p></li>
-														<%= button_to 'Đăng xuất', logout_path, method: :delete %>
-													<div class="clearfix"></div>
-												</div>
-											</ul>
-									</li>				
-				<% end %>
 					<li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart<span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
@@ -186,6 +169,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</ul>
 					</li>
 				  </ul>
+
+<% if current_nguoidung %>
+<%= link_to "Logout", destroy_nguoidung_session_path, method: :delete, :class=>"menu__link" %>
+<% else %>
+<%= link_to "Login", new_nguoidung_session_path %>
+<% end %>
+
 				</div>
 			  </div>
 			</nav>	
@@ -198,6 +188,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- //banner-top -->
 <!-- banner -->
+
 
 
 
@@ -228,6 +219,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"></div>
 	</div>
 </div>
+
+
+
 <!-- //header-bot -->
 <!-- //banner -->
 <div class="header-slider" >
@@ -248,6 +242,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<figcaption class="card-body">Image caption 4</figcaption>
 	</figure>
 </div>
+
+
+
 		    <%= yield %>
 
 <!-- footer -->

@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authorize, only: [:show]
-
+  #skip_before_action :authorize, only: [:show]
+  before_action :authenticate_nguoidung!, only: [:index, :create, :edit ,:update, :destroy]
 
   # GET /products
   # GET /products.json

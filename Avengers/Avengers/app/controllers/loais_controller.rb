@@ -1,5 +1,6 @@
 class LoaisController < ApplicationController
   before_action :set_loai, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_nguoidung!
 
   # GET /loais
   # GET /loais.json
