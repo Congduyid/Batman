@@ -9,6 +9,7 @@ class Product < ApplicationRecord
     validates :price, numericality: {greater_than_or_equal_to: 0.01}
 
     has_many :line_items
+    has_many :orders, through: :line_items
     before_destroy :check_if_has_line_item
   
 	private
