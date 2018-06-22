@@ -35,6 +35,10 @@
     <%= form.label :ghichu %>
     <%= form.text_area :ghichu %>
   </div>
+     <div class="field">
+          <%= form.label :total %>
+          <%= form.number_field :total, :value =>@total,:readonly => true%>
+</div>
 
   <div class="actions">
     <%= form.submit 'Dat hang'%>

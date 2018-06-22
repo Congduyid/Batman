@@ -6,6 +6,7 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.string :email
       t.decimal :sdt
       t.text :ghichu
+      t.decimal :total
 
       t.timestamps
     end

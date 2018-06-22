@@ -43,7 +43,7 @@ RailsAdmin.config do |config|
 
     ## With an audit adapter, you can add:
     history_index
-     history_show
+    history_show
   end
 
   config.total_columns_width = 1500
