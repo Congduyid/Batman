@@ -200,7 +200,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<form>
 				<div>
 				<%= form_tag home_path, method: :get do %>
-				 <div class="input-group input-group-lg">  
+				 <div style="margin-top:15px" class="input-group input-group-lg">  
 				<%= text_field_tag "query", params[:query], placeholder: "Search for...", :class=>'form-control' %>
 				<span class="input-group-btn">
 				<%= submit_tag "Search" , :class=>'btn btn-default' %>
