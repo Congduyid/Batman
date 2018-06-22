@@ -1,0 +1,10 @@
+1/ Lọc order theo ngày tạo:
+
+select orders.id, orders.name, products.title, line_items.quantity, products.price * line_items.quantity as total, line_items.created_at as ngaylap 
+from orders, products, line_items where line_items.order_id = orders.id and line_items.product_id = products.id
+order by line_items.created_at DESC
+
+
+
+@a = Order.connection.select_all(%Q{select orders.id, orders.name, products.title, line_items.quantity, products.price * line_items.quantity as total, line_items.created_at as ngaylap from orders, products, line_items where line_items.order_id = orders.id and line_items.product_id = products.id order by line_items.created_at DESC})
+
