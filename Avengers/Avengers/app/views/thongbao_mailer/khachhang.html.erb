@@ -18,6 +18,6 @@
     <br><hr>
     <p>Đơn hàng của bạn: </p>
     <%= render @order.line_items %><br>
-    <p>Tổng đơn: </p>
+    <p>Tổng đơn: <%= @order.total %></p>
   </body>
 </html>

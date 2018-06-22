@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2018_06_21_120117) do
     t.string "email"
     t.decimal "sdt"
     t.text "ghichu"
-    t.decimal "total"
+    t.integer "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "trang_thai_don_hang"
