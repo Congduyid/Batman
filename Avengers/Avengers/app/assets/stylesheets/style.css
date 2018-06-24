@@ -53,8 +53,8 @@ label{
     width: 33%;
     text-align: center;
 	color:#848484;
-	font-size:16px;
-    padding: 12px 0;
+	font-size:13px;
+    padding: 7px 0;
 }
 .header ul li:nth-child(2) {
     border-left: 1px solid #eee;
@@ -666,6 +666,7 @@ top: 9%;
 .footer{
     padding: 70px 0;
 	border-top:1px solid #f1f1f1;
+	background-color: #F5F5F5;
 }
 .footer-left p{
     color: #848484;

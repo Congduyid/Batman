@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'charts/index'
   devise_for :nguoidungs
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   

@@ -8,7 +8,9 @@ class HomeController < ApplicationController
     #@cart = current_cart
 
     if current_nguoidung
+      if current_nguoidung.admin == true
       redirect_to rails_admin_path
+      end
     end
 
     if params[:query].present?

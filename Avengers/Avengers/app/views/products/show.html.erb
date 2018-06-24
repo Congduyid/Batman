@@ -3,45 +3,43 @@
 	<div class="container">
 		<div class="col-md-6 single-right-left animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
 			<div class="grid images_3_of_2">
-				<div class="flexslider">
-					<!-- FlexSlider -->
-						<script>
-						// Can also be used with $(document).ready()
-							$(window).load(function() {
-								$('.flexslider').flexslider({
-								animation: "slide",
-								controlNav: "thumbnails"
-								});
-							});
-						</script>
-					<!-- //FlexSlider-->
+				
 <center><p><%= image_tag @product.image.url(:medium),:size=>"300xauto"%></p></center>
+
 					<div class="clearfix"></div>
-				</div>	
 			</div>
 		</div>
 		<div class="col-md-6 single-right-left simpleCart_shelfItem animated wow slideInRight animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInRight;">
-					<h1><%= @product.title %></h1>
-					Loại: <h3><%= @product.loai.loaihang %></h3>
+					<a class="list-group-item"><span class="badge badge-primary">Thông tin sản phẩm</span> <i class="ti ti-bell"></i> 
+						<h1 style="font-size: 23px; font-weight:bold"><%= @product.title %></h1>
+						<span style="font-size: 30px;color:#BF360C" class="item_price"><%= number_to_currency(@product.price, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>		
+					</a>
+					<a class="list-group-item"><span class="badge badge-info">Loại</span> <i class="ti ti-bell"></i> <%= @product.loai.loaihang %> </a> 
+					<center><a class="list-group-item"><i class="ti ti-bell"></i> 
+						<div class="description">
+						<p><%= button_to 'Thêm vào giỏ hàng', line_items_path(:product_id => @product), :class=>"item_add hvr-outline-out button2" %> </p>
+						</div> 
+					</a> </center>
 
-
-					<span style="font-size: 30px" class="item_price"><%= number_to_currency(@product.price, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>
-					
-					<div class="description">
-					<%= button_to 'Add to Cart', line_items_path(:product_id => @product), :class=>"item_add hvr-outline-out button2" %>
-
-					</div>
 						<div class="clearfix"> </div>
-					</div>
-					
+					</div>				
 		</div>
-				<div class="clearfix"> </div>
 
+			<div class="alert alert-success alert-dismissable">
+				<button aria-hidden="true" data-dismiss="alert" class="close" type="button"> Đóng </button>
+				<h2 class="t-button"><span class="label label-success">Chính sách ưu đãi khi mua hàng</span></h2>
+				<p> <%= image_tag "/assets/delivery.png", :size=>"30x23" %> Miễn phí vận chuyển</p>
+				<p> <%= image_tag "/assets/doitra.png", :size=>"30x23" %> Cho phép đổi trả trong 2 tháng đầu tiên</p>
+				<p> <%= image_tag "/assets/247.png", :size=>"30x23" %> Dịch vụ khách hàng 24/7</p>
+			</div>
+
+
+				<div class="clearfix"> </div>
 				<div class="bootstrap-tab animated wow slideInUp animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInUp;">
 					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 						<ul id="myTab" class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Description</a></li>
-							<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Comment</a></li>
+							<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Chi tiết sản phẩm</a></li>
+							<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Đánh giá sản phẩm</a></li>
 						</ul>
 						<div id="myTabContent" class="tab-content">
 							<div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
@@ -61,9 +59,7 @@
 											(d.head || d.body).appendChild(s);
 											})();
 											</script>
-											<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-									
+											<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>		
 									</div>
 								</div>
 							</div>
