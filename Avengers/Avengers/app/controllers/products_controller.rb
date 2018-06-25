@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @ecs = Product.limit(5).order("RANDOM()").where("loai_id = 2")
+    @ecs = Product.limit(3).order("RANDOM()")
   end
 
   # GET /products/new

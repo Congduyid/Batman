@@ -1,4 +1,7 @@
 class ChartsController < ApplicationController
+  include CurrentCart
+  before_action :set_cart
+  before_action :authenticate_nguoidung!
   $Alltotal = 0
   def index
     @param = params[:bdaymonth]

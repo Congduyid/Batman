@@ -5,6 +5,7 @@
 						
 <div class="col-md-3 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
+							
 								<div class="men-thumb-item">
 								<p><%= image_tag product.image.url(:medium), :class=>"pro-image-front", :style=>"width: 100%;height: auto" %></p>
 								<p><%= image_tag product.image.url(:medium), :class=>"pro-image-back", :style=>"width: 100%;height: auto"%></p>
@@ -15,7 +16,7 @@
 										</div>										
 								</div>
 								<div class="item-info-product ">
-								<h3 style="font-size:20px"><%= product.title %></h3>									
+								<%= link_to product do %><h3 style="font-size:20px"><%= product.title %></h3><%end%>						
 								<div class="info-product-price">
 								<span class="item_price"><%= number_to_currency(product.price, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>
 									</div>

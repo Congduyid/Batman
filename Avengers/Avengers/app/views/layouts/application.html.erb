@@ -37,26 +37,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 
-<!-- header -->
-<div class="header">
-	<div class="container">
-		<ul>
-			<li>Giao hàng nhanh chóng</li>
-			<li>Miễn phí giao hàng</li>
-			<% if current_nguoidung %>
-			<li><%= link_to "Đăng xuất", destroy_nguoidung_session_path, method: :delete %></li>
-			<% else %>
-			<li><%= link_to "Đăng nhập", new_nguoidung_session_path %></li>
-			<% end %>
-		</ul>
-	</div>
-</div>
-<!-- //header -->
-<!-- header-bot -->
-
 <!-- banner -->
 <div class="ban-top">
-	<div class="container">
+	<div style="z-index: 10;height:auto;width:100%;position:fixed; background-color:black;top:0" class="container">
 		<div class="top_nav_left">
 			<nav class="navbar navbar-default">
 			  <div class="container-fluid">
@@ -161,9 +144,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<% end %>	
 											</div>
 										</ul>	
+
+	
 									<div class="clearfix"></div>
 								</div>
 							</ul>
+
+							<% if current_nguoidung %>
+							<li><%= link_to "Đăng xuất", destroy_nguoidung_session_path, method: :delete, :class=>"menu__link" %></li>
+							<% else %>
+							<li><%= link_to "Đăng nhập", new_nguoidung_session_path, :class=>"menu__link" %></li>
+							<% end %>
 					</li>
 				  </ul>
 				</div>
@@ -175,13 +166,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"></div>
 	</div>
 </div>
-
 <!-- //banner-top -->
 <!-- banner -->
-
-
-
-
 <div class="header-bot">
 	<div class="container">
 		<div class="col-md-2 header-left">
@@ -194,24 +180,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<%= text_field_tag "query", params[:query], placeholder: "Tìm sản phẩm, phụ kiện", :class=>'form-control' %>
 				<span class="input-group-btn">
 				<%= submit_tag "Tìm" , :class=>'btn btn-default' %>
-
       </span>
        	
     </div>
-
 				  </div>
-
 				<% end %>
 				<div class="clearfix"></div>
 			</form>
 		</div>
-		
 		<div class="clearfix"></div>
 	</div>
 </div>
-
-
-
 <!-- //header-bot -->
 <!-- //banner -->
 <div class="header-slider" >

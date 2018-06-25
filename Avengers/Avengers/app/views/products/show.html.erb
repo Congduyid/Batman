@@ -32,7 +32,7 @@
 										</div>										
 								</div>
 								<div class="item-info-product ">
-								<h3 style="font-size:15px"><%= product.title %></h3>									
+								<%=link_to product do%><h3 style="font-size:15px"><%= product.title %></h3> <%end%>									
 								<div class="info-product-price">
 								<span  style="font-size:15px" class="item_price"><%= number_to_currency(product.price, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>
 									</div>
