@@ -1,10 +1,13 @@
 class ProductsController < ApplicationController
+  include CurrentCart
+  before_action :set_cart
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   #skip_before_action :authorize, only: [:show]
   before_action :authenticate_nguoidung!, only: [:index, :create, :edit ,:update, :destroy]
 
   # GET /products
   # GET /products.json
+
   def index
     if params[:query].present?
       @products = Product.search_name(params[:query]).paginate(page: params[:page], per_page: 2)
@@ -17,6 +20,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    @ecs = Product.limit(5).order("RANDOM()").where("loai_id = 2")
   end
 
   # GET /products/new

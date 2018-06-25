@@ -1,4 +1,8 @@
 class GiaphukienController < ApplicationController
+
+  include CurrentCart
+  before_action :set_cart
+
 	def index
         if params[:query].present?
             @tatcapk = Product.where(:loai_id => "2" ).search_name(params[:query]).paginate(page: params[:page], per_page: 5)

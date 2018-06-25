@@ -1,5 +1,6 @@
 class MottrieubatrieuController < ApplicationController
-
+  include CurrentCart
+  before_action :set_cart
     def tatcasp
         if params[:query].present?
             @tatca = Product.where("loai_id = 1" ).search_name(params[:query]).paginate(page: params[:page], per_page: 5)
