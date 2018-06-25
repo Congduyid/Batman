@@ -73,4 +73,9 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.navigation_static_label = "Thống kê"
+  config.navigation_static_links = {
+  'đơn hàng' => '/charts/index' #or whatever you used to mount RailsAdmin in your routes file
+}
+
 end

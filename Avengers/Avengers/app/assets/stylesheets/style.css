@@ -2445,7 +2445,7 @@ background:#FDA30E;
 /*-- //men-wear --*/
 /*-- single-page --*/
 .single {
-    padding: 90px 0;
+    padding: 0 0;
 }
 .single-right-left h3 {
     text-transform: capitalize;
