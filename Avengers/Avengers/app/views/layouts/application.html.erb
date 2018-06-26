@@ -151,10 +151,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</ul>
 
 							<% if current_nguoidung %>
+								<% if current_nguoidung.admin == true %>
+									<li><%= link_to "Admin", rails_admin_path, :class=>"menu__link" %></li>
+								<%end%>
 							<li><%= link_to "Đăng xuất", destroy_nguoidung_session_path, method: :delete, :class=>"menu__link" %></li>
 							<% else %>
 							<li><%= link_to "Đăng nhập", new_nguoidung_session_path, :class=>"menu__link" %></li>
 							<% end %>
+
+							
 					</li>
 				  </ul>
 				</div>
@@ -195,16 +200,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //banner -->
 <div class="header-slider" >
 	<figure>
-	<%= image_tag "/assets/qc1.png", :style=>"width:100%;height:auto" %>
+	<%= image_tag "/assets/qc1.png", :style=>"width:75%;height:auto" %>
 	</figure>
 	<figure>
-	<%= image_tag "/assets/qc2.png", :style=>"width:100%;height:auto" %>
+	<%= image_tag "/assets/qc2.png", :style=>"width:75%;height:auto" %>
 	</figure>
 	<figure>
-		<img style="width:100%;height:auto" src="https://cdn1.tgdd.vn/qcao/30_05_2018_13_59_14_Samsung-j4-j6-800-300.png" alt="">
+	<%= image_tag "/assets/qc1.png", :style=>"width:75%;height:auto" %>
 	</figure>
 	<figure>
-	<img style="width:100%;height:auto" src="https://cdn1.tgdd.vn/qcao/30_05_2018_13_59_14_Samsung-j4-j6-800-300.png" alt="">
+	<%= image_tag "/assets/qc2.png", :style=>"width:75%;height:auto" %>
 	</figure>
 </div>
 
