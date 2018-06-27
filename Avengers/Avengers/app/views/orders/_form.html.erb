@@ -10,8 +10,8 @@
       </ul>
     </div>
   <% end %>
-
-  <table>
+<center>
+  <table class="ec">
   <tbody>
    <tr>
         <td>
@@ -56,12 +56,14 @@
   </table>
 
      <div class="field">
+     <hr>
          <div class="giatien">  <%= form.label :total %> : <%= number_to_currency(@total, unit: " VNĐ",format: "%n %u",:precision => 0) %> </div>
          <div hidden> <%= form.number_field :total, :value =>@total,:readonly => true%> </div>
 </div>
 
   <div class="actions">
-    <%= form.submit 'Dat hang'%>
+    <%= form.submit 'Đặt hàng', :class=>"item_add single-item hvr-outline-out button2" %>
   </div>
 <% end %>
 								<span class="item_price"></span>
+</center>
