@@ -18,7 +18,7 @@
     <br><hr>
     <p>Đơn hàng của bạn: </p>
     <%= render @order.line_items %><br>
-    <p>Tổng đơn:</p><span class="item_price"><%= number_to_currency(@order.total, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>
+    <p>Tổng đơn: <%= number_to_currency(@order.total, unit: " VNĐ",format: "%n %u",:precision => 0) %> </p>
 
   </body>
 </html>
