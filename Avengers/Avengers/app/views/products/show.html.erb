@@ -25,6 +25,9 @@
 						<!-- Hiển thị random 5 phụ kiện -->
 							<% @ecs.each do |product| %>				
 							<div class="col-md-4 product-men">
+							<% if product.hot == true %>
+								<%= image_tag "/assets/hot.gif",:style=>"position: absolute;height: 50px ;width: 80px; left: 0px; z-index: 1" %>
+							<% end %>
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
 								<p><%= image_tag product.image.url(:medium), :class=>"pro-image-front", :style=>"width: 100%;height: 220px" %></p>
