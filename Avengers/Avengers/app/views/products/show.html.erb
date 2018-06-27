@@ -18,10 +18,11 @@
 						<span style="font-size: 30px;color:#BF360C" class="item_price"><%= number_to_currency(@product.price, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>		
 					</a>
 					<a class="list-group-item"><span class="badge badge-info">Loại</span> <i class="ti ti-bell"></i> <%= @product.loai.loaihang %> </a> 
-					
-						<div class="description">
-						<%= button_to 'Thêm vào giỏ hàng', line_items_path(:product_id => @product),remote: true, :class=>"item_add single-item hvr-outline-out button2" %>					
-							<!-- Hiển thị random 5 phụ kiện -->
+					<%= image_tag "/assets/banner2.gif",:style=>"height: auto ;width: 100%; z-index: 1" %>	
+					<div class="description">
+						<%= button_to 'Thêm vào giỏ hàng', line_items_path(:product_id => @product),remote: true, :class=>"item_add single-item hvr-outline-out button2" %>
+	
+						<!-- Hiển thị random 5 phụ kiện -->
 							<% @ecs.each do |product| %>				
 							<div class="col-md-4 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
