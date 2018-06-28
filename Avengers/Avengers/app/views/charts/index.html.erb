@@ -2,10 +2,10 @@
     <%= notice %>
 </p>
 
-<h1>Orders</h1>
+<h1>Thống kê</h1>
 <form>
-    <input id="bday-month" type="month" name="bdaymonth">
-    <input type="submit" id="btn">
+    <input class="form-control" style="width:25%" id="bday-month" type="month" name="bdaymonth">
+    <input type="submit" id="btn" value="Xem">
 </form>
 <table class="table">
     <thead>
@@ -16,13 +16,11 @@
             <th>Email</th>
             <th>Ngày đặt hàng</th>
             <th>Tổng đơn hàng</th>
-            <th colspan="3"></th>
+            <th>Tác vụ</th>
         </tr>
     </thead>
     <tbody>
         <% if @orders%>
-            <h1>All total</h1>
-            <span class="item_price"><%= number_to_currency($Alltotal, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>
                 <% @orders.each do |order| %>
                     <tr>
                         <td>
@@ -43,11 +41,19 @@
                         <td>
                             <%= number_to_currency(order.total) %>
                         </td>
+                        <td>
+                            <%= link_to 'Xem', order , :class=>"item_add single-item hvr-outline-out button2"%>
+                            <%= link_to 'Xóa', order, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"item_add single-item hvr-outline-out button2" %>
+                        </td>
+
                     </tr>
+
                     <% end %>
-                        <%end%>
+                        
     </tbody>
 
-</table>
+</table>   
+                    <h1>Tổng đơn: <%= number_to_currency($Alltotal, unit: " VNĐ",format: "%n %u",:precision => 0) %></h1>
 
+<%end%>         
 <br>

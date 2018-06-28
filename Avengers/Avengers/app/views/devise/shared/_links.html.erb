@@ -3,9 +3,10 @@
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Đăng ký mới", new_registration_path(resource_name) %><br />
-  <hr>
-  <a class="list-group-item"><span class="badge badge-info">Thông báo</span> <i class="ti ti-bell"></i> Chỉ dành cho người quản lý. Tài khoản đăng ký thông thường sẽ không có hiệu lực </a> 
+  <a class="list-group-item"><span class="badge badge-info">Thông báo</span> <i class="ti ti-bell"></i>   <%= link_to "Đăng ký mới", new_registration_path(resource_name) %><br />
+ Chỉ dành cho người quản lý. Tài khoản đăng ký thông thường sẽ không có hiệu lực </a> 
+     <br><%= link_to "< Trang chủ", home_path %>
+
 
 <% end -%>
 <!-- 

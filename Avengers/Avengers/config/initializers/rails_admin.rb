@@ -52,6 +52,12 @@ RailsAdmin.config do |config|
     history_show
   end
 
+  config.model Nguoidung do
+    label "User"
+  end
+  config.model Loai do
+    label "Type"
+  end
   config.total_columns_width = 1500
   config.model Product do
     edit do
@@ -73,9 +79,9 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.navigation_static_label = "Thống kê"
+  config.navigation_static_label = "Statistical"
   config.navigation_static_links = {
-  'đơn hàng' => '/charts/index' #or whatever you used to mount RailsAdmin in your routes file
+  'Order' => '/charts/index' #or whatever you used to mount RailsAdmin in your routes file
 }
 
 end

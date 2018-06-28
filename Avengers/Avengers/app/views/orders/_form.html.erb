@@ -10,37 +10,60 @@
       </ul>
     </div>
   <% end %>
+<center>
+  <table class="ec">
+  <tbody>
+   <tr>
+        <td>
+          <div class="field">
+          <%= form.label "Tên KH: " %>
+        </td>
+        <td><%= form.text_field :name,size:41 %></div></td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+  <tr>
+     <td>
+      <div class="field">
+      <%= form.label "Địa chỉ: " %>
+     </td>
+    <td><%= form.text_area :diachi, rows: 3, cols: 40 %></td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :diachi %>
-    <%= form.text_area :diachi, rows: 3, cols: 40 %>
-  </div>
+  <tr>
+      <td>
+        <div class="field">
+        <%= form.label "Email: " %>
+      </td>
+      <td><%= form.text_field :email, size: 41 %></td>
+  </tr>     
+  
+  <tr>
+    <td>
+        <div class="field">
+        <%= form.label "Số điện thoại: " %></td>
+        <td><%= form.text_field :sdt,size:41%></td>
+  </tr>     
+  
+  <tr>
+     <td>
+         <div class="field">
+         <%= form.label "Ghi chú thêm: " %>
+      </td>
+      <td><%= form.text_area :ghichu, rows: 3, cols: 40  %></td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, size: 40 %>
-  </div>
+  </tbody>
+  </table>
 
-  <div class="field">
-    <%= form.label :sdt %>
-    <%= form.text_field :sdt %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ghichu %>
-    <%= form.text_area :ghichu %>
-  </div>
      <div class="field">
-          <%= form.label :total %>
-          <%= form.number_field :total, :value =>@total,:readonly => true%>
+     <hr>
+         <div class="giatien">  <%= form.label :total %> : <%= number_to_currency(@total, unit: " VNĐ",format: "%n %u",:precision => 0) %> </div>
+         <div hidden> <%= form.number_field :total, :value =>@total,:readonly => true%> </div>
 </div>
 
   <div class="actions">
-    <%= form.submit 'Dat hang'%>
+    <%= form.submit 'Đặt hàng', :class=>"item_add single-item hvr-outline-out button2" %>
   </div>
 <% end %>
+								<span class="item_price"></span>
+</center>
