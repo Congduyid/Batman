@@ -13,20 +13,35 @@
  *= require_tree .
  *= require_self
  */
- 
- .pagination {
-    display: block;
-    float: right;
-    color: #424242;
-    background: #e9e9e9;
-    padding: 15px 15px;
-    margin-right: 40px;
-    margin-right: 40px;
-    border-radius: 3px;
-    border: solid 1px #c0c0c0;
-    box-shadow: inset 0px 1px 0px rgba(255,255,255, .7), 0px 1px 3px rgba(0,0,0, .1);
-    text-shadow: 1px 1px 0px rgba(255,255,255, 0.7);
+ .pagination  a , em.current ,span.next_page.disabled,span.previous_page.disabled{
+    color: #007bc7;
+    float: left;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    background-color: rgb(226, 226, 226);
+    color: rgb(31, 31, 31);  
+  }
+   
+  .pagination a.active {
+      background-color: rgb(226, 226, 226);
+      color: rgb(31, 31, 31);
+  }
+  .pagination a:hover:not(.active) {
+    background-color: rgb(150, 150, 150);
+  }
+
+  .pagination a:not(.active) {
+    background-color: rgb(209, 209, 209);
+    color: rgb(0, 0, 0);
 }
+
+  .pagination a:hover:not(.active) {
+    background-color: rgb(150, 150, 150);
+  }
+
+  
 
 body{
     padding-top:4%;

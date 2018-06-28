@@ -6,8 +6,9 @@
             <div class="account-wall">
             <%= image_tag "logo.png", :class=>"profile-img", :style=>"height:30%; width: 30%" %>
                 <form class="form-signin">
-                   <%= f.email_field :email, autofocus: true, autocomplete: "email",:class=>'form-control', :placeholder=>"Email", :style=>"height:50px" %>
-                  <%= f.password_field :password, autocomplete: "off",:class=>'form-control', :required=>"true", :placeholder=>"Password", :style=>"height:50px"  %>
+                   <img src="/assets/user.png" style="width:48px;height:48px; float:left">  <%= f.email_field :email, autofocus: true, autocomplete: "email",:class=>'form-control', :placeholder=>"Email", :style=>"height:50px" %> </img>
+                 <img src="/assets/pass.png" style="width:48px;height:48px; float:left">
+                  <%= f.password_field :password, autocomplete: "off",:class=>'form-control', :required=>"true", :placeholder=>"Password", :style=>"height:50px; margin-top:10px"  %>
                 <hr><button class="btn btn-lg btn-primary btn-block" type="submit">
                     Đăng nhập</button>
                 <br>
