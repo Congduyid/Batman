@@ -79,6 +79,10 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Cart do
+    visible false
+  end
+
   config.navigation_static_label = "Statistical"
   config.navigation_static_links = {
   'Order' => '/charts/index' #or whatever you used to mount RailsAdmin in your routes file

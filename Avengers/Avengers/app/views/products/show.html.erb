@@ -1,6 +1,5 @@
 <% content_for :title, @product.title + " | Cửa hàng Samsung" %>
 
-
 <p id="notice"><%= notice %></p>
 <div class="single">
 	<div class="container">
@@ -17,11 +16,14 @@
 						<h1 style="font-size: 23px; font-weight:bold"><%= @product.title %></h1>
 						<span style="font-size: 30px;color:#BF360C" class="item_price"><%= number_to_currency(@product.price, unit: " VNĐ",format: "%n %u",:precision => 0) %></span>		
 					</a>
-					<a class="list-group-item"><span class="badge badge-info">Loại</span> <i class="ti ti-bell"></i> <%= @product.loai.loaihang %> </a> 
+					<a class="list-group-item">
+						<span class="badge badge-info">Loại</span> <i class="ti ti-bell"></i> <%= @product.loai.loaihang %> 
+						<iframe src="https://www.facebook.com/plugins/share_button.php?href= <%= request.original_url %> " width="113" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+					</a>
+ 
 					<%= image_tag "/assets/banner2.gif",:style=>"height: auto ;width: 100%; z-index: 1" %>	
 					<div class="description">
 						<%= button_to 'Thêm vào giỏ hàng', line_items_path(:product_id => @product),remote: true, :class=>"item_add single-item hvr-outline-out button2" %>
-	
 						<!-- Hiển thị random 5 phụ kiện -->
 							<% @ecs.each do |product| %>				
 							<div class="col-md-4 product-men">
