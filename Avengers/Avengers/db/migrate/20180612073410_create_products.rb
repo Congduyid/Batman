@@ -3,6 +3,8 @@ class CreateProducts < ActiveRecord::Migration[5.2]
     create_table :products do |t|
       t.string :title
       t.text :description
+      t.boolean :hot
+      t.boolean :new
       t.string :image_url
       t.decimal :price, :precision => 20, :scale => 2
       t.string :species
