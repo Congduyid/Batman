@@ -4,12 +4,12 @@
 		<div class="ele-bottom-grid">
 		<h3><span>Sản phẩm bán chạy</span></h3>
 		<% @hots.each do |product| %>
-		<div class="col-md-3 product-men" style="width: 15%; height:15%">
+		<div class="col-md-3 product-men">
 		<%= image_tag "/assets/hot.gif",:style=>"position: absolute;height: 50px ;width: 80px; left: 0px; z-index: 1" %>
 					<div class="men-pro-item simpleCart_shelfItem">
 						<div class="men-thumb-item">
-						<p><%= image_tag product.image.url(:medium), :class=>"pro-image-front", :style=>"width: 100%;height: auto" %></p>
-						<p><%= image_tag product.image.url(:medium), :class=>"pro-image-back", :style=>"width: 100%;height: auto"%></p>
+						<p><%= image_tag product.image.url(:medium), :class=>"pro-image-front", :style=>"width: 80%;height: auto" %></p>
+								<p><%= image_tag product.image.url(:medium), :class=>"pro-image-back", :style=>"width: 80%;height: auto"%></p>
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
 											<td><%= link_to 'Chi tiết', product ,:class=>"link-product-add-cart"%></td>
@@ -37,7 +37,7 @@
 				<h3><span>Điện thoại</span></h3>
 <% @products.each do |product| %>
 						
-<div class="col-md-3 product-men">
+<div class="col-md-2 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 							
 								<div class="men-thumb-item">
@@ -61,5 +61,5 @@
     <% end %>
 				</div>
 						<div class="clearfix"></div>
-							<p><%= will_paginate @products %></p>
+							<center><%= will_paginate @products %></center>
 </div>
