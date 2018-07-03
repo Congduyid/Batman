@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :description
       t.boolean :hot
-      t.boolean :new
+      t.boolean :new_product
       t.string :image_url
       t.decimal :price, :precision => 20, :scale => 2
       t.string :species

@@ -13,5 +13,6 @@ class HomeController < ApplicationController
       @products = Product.where("loai_id = 1").all.paginate(page: params[:page], per_page: 10)
     end
     @hots = Product.where("hot = true").limit(5).order("RANDOM()")    
+    @news = Product.where("new_product = true").limit(5).order("RANDOM()")
   end
 end
