@@ -67,9 +67,9 @@ class MottrieubatrieuController < ApplicationController
     end
     def bamuoibalam
       if params[:query].present?
-          @hailambamuoi = Product.where(:price => 30000000..35000000, :loai_id=>"1").search_name(params[:query]).paginate(page: params[:page], per_page: 10)
+          @bamuoibalam = Product.where(:price => 30000000..35000000, :loai_id=>"1").search_name(params[:query]).paginate(page: params[:page], per_page: 10)
         else
-          @hailambamuoi = Product.where(:price => 30000000..35000000, :loai_id=>"1").all.paginate(page: params[:page], per_page: 10)
+          @bamuoibalam = Product.where(:price => 30000000..35000000, :loai_id=>"1").all.paginate(page: params[:page], per_page: 10)
         end
   end
     def balambonmuoi

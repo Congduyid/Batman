@@ -1,2 +1,5 @@
-//Template
-- Copy file .css và .js vào thư mục assets. Đổi đường dẫn /assets/
+//Đăng ký tài khoản
+//Mở Rails console
+u = Nguoidung.first
+u.admin = true
+u.save
