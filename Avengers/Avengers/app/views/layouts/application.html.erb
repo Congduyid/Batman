@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title><%= yield(:title) %></title>
 	<%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <%= tinymce_assets %>
+
+
 <script type="text/javascript" src="/assets/tinymce.js">
-    
+
+    <script type="text/javascript" src="/assets/ext-base.js"></script>
+    <script type="text/javascript" src="/assets/ext-all.js"></script>
+
+	
+
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -33,6 +41,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="/assets/jquery.loopslider.js"></script>
 <link rel="icon" href="/assets/logo.png">
+	<link rel="stylesheet" type="text/css" href="/assets/ext-all.css"/>
+
 </head>
 <body>
 
@@ -208,8 +218,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<%= image_tag "/assets/qc4.png", :style=>"width:85%;height:auto" %>
 	</figure>
 </div>
-
-
 		    <%= yield %>
 
 <!-- footer -->
